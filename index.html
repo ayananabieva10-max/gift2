@@ -1,42 +1,232 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1c241b">
-  <title>Für Julius — alles Liebe zum Geburtstag</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    :root{--paper:#f7f1e6;--cream:#fffaf1;--ink:#263028;--green:#243827;--sage:#b9c5aa;--rose:#b44b55;--sun:#e6b255;--line:#26302820;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace;--ease:cubic-bezier(.22,.76,.25,1)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}button{font:inherit;color:inherit}.prelude{min-height:100svh;display:grid;place-items:center;padding:24px;background:linear-gradient(130deg,#172415,#334c31);color:#fff;position:relative;overflow:hidden}.prelude:before,.prelude:after{content:"";position:absolute;border-radius:50%;filter:blur(8px);opacity:.2}.prelude:before{width:62vmax;height:62vmax;right:-32vmax;bottom:-31vmax;background:#f4bd67}.prelude:after{width:42vmax;height:42vmax;left:-25vmax;top:-22vmax;background:#af5a60}.sparkle{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.6px);background-size:32px 32px;mask-image:linear-gradient(#0002,#000);opacity:.26}.intro{max-width:680px;text-align:center;position:relative;z-index:1;animation:appear 1.1s var(--ease) both}.intro-kicker{font:500 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#e9d6aa}.intro h1{font:500 clamp(4.4rem,14vw,9rem)/.83 var(--serif);letter-spacing:-.07em;margin:23px 0}.intro h1 i{color:#f5c96b}.intro p{max-width:400px;margin:0 auto;color:#f4efe6cc;font-size:clamp(1rem,2vw,1.15rem);line-height:1.65}.open-letter{margin-top:38px;border:1px solid #f4e3b766;background:#ffffff12;color:#fff;padding:14px 19px;border-radius:99px;cursor:pointer;transition:transform .25s var(--ease),background .25s}.open-letter:hover{transform:translateY(-3px);background:#ffffff20}.open-letter:focus-visible,.memory:focus-visible,.more:focus-visible{outline:3px solid var(--sun);outline-offset:4px}@keyframes appear{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-    .site{display:none}.site.visible{display:block;animation:appear .65s var(--ease)}.nav{position:sticky;top:0;z-index:9;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(22px,6vw,94px);background:#f7f1e6e8;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-mark{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}.nav a{color:var(--ink);font-size:13px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}.wrap{max-width:1180px;margin:auto;padding:0 clamp(22px,6vw,94px)}
-    .hero{padding:clamp(68px,13vw,150px) 0 96px;display:grid;grid-template-columns:1fr minmax(280px,460px);gap:clamp(34px,8vw,110px);align-items:end}.hero-copy{padding-bottom:23px}.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--rose)}.hero h2{font:500 clamp(3.7rem,8.5vw,7.7rem)/.88 var(--serif);letter-spacing:-.07em;margin:22px 0 29px}.hero h2 em{color:var(--rose)}.hero-text{font-size:clamp(1rem,2vw,1.18rem);line-height:1.75;max-width:510px}.hero-text strong{font-weight:600}.photo-frame{position:relative}.photo-frame:before{content:"";position:absolute;inset:-15px 15px 15px -15px;background:var(--sage);z-index:-1}.photo-frame img{display:block;width:100%;height:min(64vw,590px);object-fit:cover;object-position:45% center;filter:saturate(.92) contrast(1.03)}.photo-note{position:absolute;right:-14px;bottom:-18px;max-width:220px;padding:14px 16px;background:var(--cream);box-shadow:0 8px 25px #2831291c;font:500 17px/1.2 var(--serif);font-style:italic;transform:rotate(2deg)}
-    .quote{background:var(--green);color:#fff;padding:clamp(70px,12vw,130px) 0;text-align:center}.quote p{max-width:820px;margin:0 auto;font:500 clamp(2rem,5vw,4.6rem)/1.06 var(--serif);letter-spacing:-.045em}.quote span{display:block;margin-top:28px;color:#d8dfd0;font:400 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
-    .chapter{padding:clamp(78px,12vw,135px) 0}.chapter-head{display:grid;grid-template-columns:160px 1fr;gap:25px;border-top:1px solid var(--line);padding-top:16px;margin-bottom:48px}.chapter-no{font:400 11px/1 var(--mono);letter-spacing:.13em;color:var(--rose)}.chapter-head h3{font:500 clamp(2.6rem,5.5vw,5rem)/.95 var(--serif);letter-spacing:-.055em;margin:0;max-width:680px}.messages{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.message{min-height:255px;padding:28px;background:var(--cream);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s var(--ease),box-shadow .3s}.message:hover{transform:translateY(-8px);box-shadow:0 16px 30px #29312916}.message .number{font:400 11px/1 var(--mono);letter-spacing:.1em;color:var(--rose)}.message h4{font:500 clamp(1.65rem,3vw,2.25rem)/1 var(--serif);letter-spacing:-.045em;margin:27px 0 12px}.message p{font-size:14px;line-height:1.65;margin:0;color:#424a42}.message .heart{font-size:17px;color:var(--rose)}
-    .gallery{background:#dfe5d5;padding:clamp(74px,11vw,122px) 0}.gallery-top{display:flex;justify-content:space-between;gap:22px;align-items:end;margin-bottom:38px}.gallery-top h3{font:500 clamp(2.8rem,6vw,5.4rem)/.9 var(--serif);letter-spacing:-.06em;margin:0}.gallery-top p{max-width:300px;font-size:14px;line-height:1.65;margin:0}.photos{display:grid;grid-template-columns:1.05fr .95fr;gap:19px;align-items:end}.memory{border:0;padding:0;background:transparent;cursor:pointer;text-align:left;position:relative;display:block;overflow:hidden}.memory img{width:100%;height:clamp(300px,48vw,610px);display:block;object-fit:cover;transition:transform .55s var(--ease),filter .4s}.memory:hover img{transform:scale(1.035);filter:brightness(.86)}.memory:nth-child(2){margin-bottom:72px}.memory:nth-child(2) img{height:clamp(250px,34vw,450px);object-position:center}.caption{position:absolute;left:0;right:0;bottom:0;padding:31px 25px 20px;color:#fff;background:linear-gradient(transparent,#101810be);font:500 20px/1.05 var(--serif);transform:translateY(4px)}.caption small{display:block;font:400 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;color:#f8eccd}.lightbox{position:fixed;inset:0;z-index:20;display:none;place-items:center;padding:25px;background:#132014ec;cursor:zoom-out}.lightbox.open{display:grid}.lightbox img{max-width:min(90vw,720px);max-height:88vh;box-shadow:0 25px 80px #000a}.lightbox button{position:absolute;right:24px;top:20px;border:0;background:transparent;color:white;font-size:29px;cursor:pointer}
-    .letter{padding:clamp(82px,13vw,150px) 0;background:var(--cream)}.letter-inner{max-width:760px;margin:auto;text-align:center}.letter .eyebrow{color:var(--rose)}.letter h3{font:500 clamp(3rem,7vw,6.2rem)/.88 var(--serif);letter-spacing:-.07em;margin:24px 0 39px}.letter-text{font:500 clamp(1.25rem,2.5vw,1.7rem)/1.55 var(--serif);letter-spacing:-.018em}.letter-text p{margin:0 0 23px}.letter-sign{margin-top:40px;font:500 1.5rem var(--serif);font-style:italic;color:var(--rose)}.more{border:0;background:var(--green);color:#fff;border-radius:99px;padding:14px 21px;margin-top:23px;cursor:pointer;transition:transform .25s var(--ease)}.more:hover{transform:translateY(-3px)}.secret{max-height:0;overflow:hidden;opacity:0;transition:max-height .7s var(--ease),opacity .5s;margin:0}.secret.show{max-height:230px;opacity:1;margin:30px 0 0}.secret p{padding:23px 25px;border:1px solid var(--line);font:500 1.3rem/1.45 var(--serif);font-style:italic}
-    footer{padding:27px clamp(22px,6vw,94px);background:var(--green);color:#dce4d7;display:flex;justify-content:space-between;gap:14px;font:400 10px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:75px}.hero-copy{padding-bottom:0}.photo-frame{max-width:470px;margin-left:auto}.chapter-head{grid-template-columns:1fr}.messages{grid-template-columns:1fr}.message{min-height:210px}.gallery-top{display:block}.gallery-top p{margin-top:20px}.photos{grid-template-columns:1fr}.memory:nth-child(2){margin:0 0 0 12vw}.memory:nth-child(2) img{height:420px}.quote p{padding:0 22px}.photo-note{right:-4px}.letter-text{font-size:1.32rem}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0c0b">
+<title>Alles Gute, Julius</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0c0b;--fg:#efe6d6;--amber:#ffb347;--red:#e8452c;--paper:#f4ead6;--ink:#1a1512;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Familjen Grotesk','Helvetica Neue',Arial,sans-serif;--out:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);user-select:none;-webkit-user-select:none;transition:background-color 1.6s ease,color 1.6s ease}
+body.lit{--bg:#eadfca;--fg:var(--ink)}
+body::after{content:"";position:fixed;inset:0;z-index:250;pointer-events:none;opacity:.32;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.6'/></svg>")}
+#glow{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:var(--lum,1);transition:opacity 1.2s;
+  background:radial-gradient(circle 280px at var(--mx,50%) var(--my,50%),rgba(255,179,71,.13),transparent 70%),radial-gradient(ellipse at 50% 45%,transparent 25%,rgba(0,0,0,.75))}
+body.lit #glow{opacity:0}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:200;pointer-events:none}
+#cur{position:fixed;left:0;top:0;width:18px;height:18px;margin:-9px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:300;display:none;transition:width .25s var(--out),height .25s var(--out),margin .25s var(--out)}
+body.fine #cur{display:block}body.fine,body.fine *{cursor:none!important}
+#cur.hot{width:58px;height:58px;margin:-29px}
+
+/* Торт */
+#cake{position:fixed;left:50%;top:50%;width:240px;height:260px;margin:-130px 0 0 -120px;z-index:5;touch-action:none;outline:none;
+  transition:transform 1.4s var(--out);animation:rise 1.2s var(--out) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}}
+#cake.parked{transform:translate(calc(64px - 50vw),calc(50vh - 68px)) scale(.4)}
+#cake svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 24px 30px rgba(0,0,0,.35))}
+#halo{position:absolute;left:50%;top:9%;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(circle,rgba(255,170,60,.6),rgba(255,120,30,.16) 40%,transparent 68%);animation:breathe 2.4s ease-in-out infinite alternate}
+@keyframes breathe{to{transform:scale(1.08)}}
+#bend{transform-box:fill-box;transform-origin:50% 100%}
+.fl{transform-box:fill-box;transform-origin:50% 100%;animation:fl .17s ease-in-out infinite alternate}
+@keyframes fl{from{transform:scale(1,1) rotate(-2deg)}to{transform:scale(.93,1.07) rotate(2deg)}}
+#hint{position:fixed;left:0;right:0;bottom:calc(9vh + env(safe-area-inset-bottom));text-align:center;z-index:6;font:500 .78rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--amber);transition:opacity .8s}
+#hint.dim{opacity:.0}
+#hint.tbl{color:inherit;opacity:.5}
+
+/* Титул */
+#title{position:fixed;left:clamp(22px,6vw,90px);top:clamp(22px,7vh,80px);margin:0;z-index:1;pointer-events:none;
+  font:400 clamp(3.6rem,13vw,10.5rem)/.88 var(--serif);letter-spacing:-.035em}
+.ln{display:block;overflow:hidden;padding:0 .06em .1em}.ln:last-child{font-style:italic;color:var(--red)}
+.ch{display:inline-block;transform:translateY(115%) rotate(6deg);opacity:0}
+#title.show .ch{transform:none;opacity:1;transition:transform 1s var(--out) calc(var(--i)*55ms),opacity .5s calc(var(--i)*55ms)}
+
+/* Фото и записка на столе */
+.print{position:absolute;z-index:10;width:var(--pw);padding:8px;background:#fbf7ef;touch-action:none;cursor:grab;opacity:0;
+  box-shadow:0 1px 1px rgba(0,0,0,.25),0 20px 40px -14px rgba(0,0,0,.5);
+  transform:translateY(120vh) rotate(var(--r));transition:transform 1.1s var(--out),opacity .4s}
+.print.in{opacity:1;transform:translateY(0) rotate(calc(var(--r) + var(--tilt,0deg)))}
+.print.settled{transition:transform .3s var(--out),box-shadow .3s}
+.print.held{box-shadow:0 34px 60px -16px rgba(0,0,0,.55);transform:translateY(-10px) scale(1.04) rotate(calc(var(--r) + var(--tilt,0deg)))}
+.print img{display:block;width:100%;height:auto;min-height:170px;background:#d8ccb6;pointer-events:none}
+.note{background:var(--paper);color:var(--ink);padding:22px;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between}
+.note small{font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+.note b{font:italic 400 2.5rem/1 var(--serif)}
+.seal{align-self:flex-end;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff7a5c,var(--red) 55%,#9c2412);box-shadow:0 4px 10px rgba(0,0,0,.35),inset 0 0 0 5px rgba(0,0,0,.08)}
+
+/* Оверлеи */
+.ov{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:20px;background:rgba(14,12,10,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.ov.on{opacity:1;visibility:visible}
+.sheet{max-height:88vh;overflow:auto;width:min(94vw,540px);padding:clamp(28px,6vw,54px);background:var(--paper);color:var(--ink);box-shadow:0 40px 90px rgba(0,0,0,.6);transform:translateY(40px) rotate(-1.5deg);transition:transform .8s var(--out)}
+.ov.on .sheet{transform:none}
+.sheet p{margin:0 0 1em;font:400 clamp(1.3rem,4.4vw,1.65rem)/1.35 var(--serif);opacity:0;transform:translateY(10px)}
+.ov.on .sheet p{opacity:1;transform:none;transition:all .7s var(--out) calc(.25s + var(--k)*.22s)}
+.sheet .sig{font-style:italic;color:var(--red);margin:1.4em 0 0}
+#big{max-width:min(92vw,900px);max-height:88vh;box-shadow:0 40px 90px rgba(0,0,0,.6);transform:scale(.92);transition:transform .6s var(--out)}
+#ovP.on #big{transform:none}
+:focus-visible{outline:2px solid var(--amber);outline-offset:6px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+</style>
 </head>
 <body>
-  <section class="prelude" id="prelude"><div class="sparkle"></div><div class="intro"><div class="intro-kicker">Eine kleine Geburtstagsnotiz</div><h1>Für <i>Julius.</i></h1><p>Ein paar Worte und kleine Augenblicke — nur für dich.</p><button class="open-letter" id="open" type="button">Brief öffnen&nbsp; ↓</button></div></section>
-  <div class="site" id="site">
-    <nav class="nav"><span class="nav-mark">Für Julius</span><a href="#letter">Zum Brief</a></nav>
-    <main>
-      <section class="hero wrap"><div class="hero-copy"><div class="eyebrow">Dein Tag</div><h2>Heute geht es<br>ganz um <em>dich.</em></h2><p class="hero-text">Alles Liebe zum Geburtstag, Julius. Ich wünsche dir ein Jahr, das sich nach dir anfühlt: leicht, mutig, voller schöner Zufälle — und mit genug Momenten, in denen du einfach stehen bleibst und denkst: <strong>Ja, genau so.</strong></p></div><div class="photo-frame"><img src="photo_2026-09-30_14-47-08.jpg" alt="Julius zwischen weißen Rosen"><div class="photo-note">Du passt ziemlich gut zwischen Rosen.</div></div></section>
-      <section class="quote"><p>„Ich hoffe, dieses neue Jahr überrascht dich auf die allerschönste Art.“</p><span>Ein Wunsch von mir für dich</span></section>
-      <section class="chapter wrap"><div class="chapter-head"><div class="chapter-no">01 — Drei Wünsche</div><h3>Ein paar Dinge, die ich dir wirklich wünsche.</h3></div><div class="messages"><article class="message"><span class="number">01 / 03</span><div><h4>Leichtigkeit.</h4><p>Dass du öfter loslässt, mehr lachst und dich nicht für jeden kleinen Moment beeilst.</p></div><span class="heart">✦</span></article><article class="message"><span class="number">02 / 03</span><div><h4>Menschen, die bleiben.</h4><p>Dass du immer genau die Nähe findest, die sich ruhig, ehrlich und nach Zuhause anfühlt.</p></div><span class="heart">✦</span></article><article class="message"><span class="number">03 / 03</span><div><h4>Große kleine Glücke.</h4><p>Gutes Essen, goldene Abende, neue Pläne — und viel mehr Gründe, auf dich anzustoßen.</p></div><span class="heart">✦</span></article></div></section>
-      <section class="gallery"><div class="wrap"><div class="gallery-top"><h3>Ein paar<br>schöne <i>Momente.</i></h3><p>Zum Festhalten. Denn einige Bilder fühlen sich einfach wie ein kleiner Ort an, zu dem man gern zurückgeht.</p></div><div class="photos"><button class="memory" type="button" data-photo="photo_2026-09-30_14-47-11.jpg"><img src="photo_2026-09-30_14-47-11.jpg" alt="Julius beim Abendessen im Sonnenuntergang"><span class="caption"><small>golden hour</small>Auf gute Abende.</span></button><button class="memory" type="button" data-photo="photo_2026-09-30_14-47-14.jpg"><img src="photo_2026-09-30_14-47-14.jpg" alt="Julius am Tisch in einem Restaurant"><span class="caption"><small>kleine pause</small>Und auf dich.</span></button></div></div></section>
-      <section class="letter" id="letter"><div class="letter-inner wrap"><div class="eyebrow">02 — Der eigentliche Brief</div><h3>Lieber Julius,</h3><div class="letter-text"><p>ich wünsche dir von Herzen einen Geburtstag, der sich warm und leicht anfühlt. Ich hoffe, du nimmst dir heute Zeit für alles, was dir gut tut — für Menschen, die dir ein Lächeln schenken, für kleine Überraschungen und für einen Moment, der nur dir gehört.</p><p>Du verdienst es, dass schöne Dinge dir ganz selbstverständlich begegnen. Möge dieses neue Lebensjahr voller Geschichten sein, die du gern erzählen wirst.</p></div><p class="letter-sign">Alles Liebe für dich.</p><button class="more" id="more" type="button" aria-expanded="false">Noch eine kleine Sache</button><div class="secret" id="secret"><p>Und nur falls du es heute noch nicht oft genug gehört hast: Du bist ein ziemlich besonderer Mensch. ✦</p></div></div></section>
-    </main><footer><span>Mit Liebe gemacht</span><span>Für Julius · Happy Birthday</span></footer>
-  </div>
-  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Foto vergrößert"><button type="button" id="close" aria-label="Foto schließen">×</button><img src="" alt=""></div>
-  <script>
-    const prelude=document.querySelector('#prelude'),site=document.querySelector('#site');document.querySelector('#open').addEventListener('click',()=>{prelude.style.display='none';site.classList.add('visible');window.scrollTo(0,0)});
-    const box=document.querySelector('#lightbox'),big=box.querySelector('img');document.querySelectorAll('.memory').forEach(card=>card.addEventListener('click',()=>{big.src=card.dataset.photo;big.alt=card.querySelector('img').alt;box.classList.add('open')}));function closeBox(){box.classList.remove('open');big.src=''}document.querySelector('#close').addEventListener('click',closeBox);box.addEventListener('click',e=>{if(e.target===box)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
-    const button=document.querySelector('#more'),secret=document.querySelector('#secret');button.addEventListener('click',()=>{const on=secret.classList.toggle('show');button.setAttribute('aria-expanded',on);button.textContent=on?'Für dich, Julius ✦':'Noch eine kleine Sache'});
-  </script>
+<div id="glow"></div><canvas id="fx"></canvas><div id="cur"></div>
+
+<h1 id="title" aria-label="Alles Gute, Julius"></h1>
+
+<div id="cake" role="button" tabindex="0" aria-label="Kerze auspusten (gedrückt halten)">
+  <div id="halo"></div>
+  <svg viewBox="0 0 240 260" aria-hidden="true">
+    <defs>
+      <pattern id="st" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="14" height="7" fill="#efe6d6"/><rect y="7" width="14" height="7" fill="#ffb347"/></pattern>
+      <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a0"/><stop offset=".6" stop-color="#ffa62e"/><stop offset="1" stop-color="#ff6a1a"/></linearGradient>
+    </defs>
+    <ellipse cx="120" cy="238" rx="114" ry="14" fill="#2a231f"/><ellipse cx="120" cy="233" rx="110" ry="11" fill="#e9dfcc"/>
+    <rect x="22" y="150" width="196" height="82" rx="10" fill="#5a3324"/><rect x="22" y="150" width="196" height="12" rx="6" fill="#2c1810"/><rect x="22" y="188" width="196" height="7" fill="#e8d9bb"/>
+    <rect x="54" y="94" width="132" height="64" rx="9" fill="#f0e2c4"/>
+    <g fill="#e8452c"><rect x="54" y="94" width="132" height="15" rx="7"/><rect x="64" y="100" width="12" height="34" rx="6"/><rect x="96" y="100" width="12" height="22" rx="6"/><rect x="128" y="100" width="12" height="38" rx="6"/><rect x="160" y="100" width="12" height="26" rx="6"/></g>
+    <rect x="113" y="42" width="14" height="54" rx="3" fill="url(#st)"/><rect x="119" y="33" width="2" height="10" fill="#222"/>
+    <g transform="translate(120,36)"><g id="bend"><g class="fl" id="flame">
+      <path d="M0,-50 C11,-32 15,-16 0,0 C-15,-16 -11,-32 0,-50Z" fill="url(#fg)"/><path d="M0,-24 C5,-16 6,-9 0,-2 C-6,-9 -5,-16 0,-24Z" fill="#fff6d8"/>
+    </g></g></g>
+  </svg>
+</div>
+<div id="hint">Kerze gedrückt halten</div>
+
+<div class="ov" id="ovL"><div class="sheet" id="sheet"></div></div>
+<div class="ov" id="ovP"><img id="big" alt="Foto"></div>
+
+<script>
+/* ============================ CONFIG ============================ */
+const CONFIG = {
+  name: 'Julius',
+  from: 'Deine Ayana',
+  photos: ['photo_2026-09-30_14-47-08.jpg', 'photo_2026-09-30_14-47-11.jpg', 'photo_2026-09-30_14-47-14.jpg'], // лежат рядом с index.html
+  headline: 'Alles Gute,',
+  letter: [
+    'Julius,',
+    'alles Gute zum Geburtstag.',
+    'Ich wünsche dir ein Jahr mit weniger Pflichten und mehr Dingen, auf die du wirklich Lust hast. Gute Gespräche, gutes Essen und ein paar Entscheidungen, die sich später als richtig herausstellen.',
+    'Ich bin froh, dass wir uns kennen.'
+  ],
+  ui: { blow: 'Kerze gedrückt halten', table: 'Fotos verschieben · Brief antippen', note: 'Für ' }
+};
+
+/* ============================ Utils ============================ */
+const $ = s => document.querySelector(s), rand = (a, b) => a + Math.random() * (b - a), wait = ms => new Promise(r => setTimeout(r, ms));
+const root = document.documentElement, cake = $('#cake'), hint = $('#hint');
+hint.textContent = CONFIG.ui.blow; document.title = CONFIG.headline + ' ' + CONFIG.name;
+
+/* Заголовок: посимвольная анимация */
+(() => { let i = 0; $('#title').innerHTML = [CONFIG.headline, CONFIG.name + '.'].map(l =>
+  `<span class="ln">${[...l].map(c => `<span class="ch" style="--i:${i++}">${c === ' ' ? '&nbsp;' : c}</span>`).join('')}</span>`).join(''); })();
+
+/* Курсор-подсветка и кастомный указатель */
+const fine = matchMedia('(pointer:fine)').matches, cur = $('#cur'); let cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
+if (fine) document.body.classList.add('fine');
+addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; root.style.setProperty('--mx', tx + 'px'); root.style.setProperty('--my', ty + 'px'); });
+addEventListener('pointerover', e => cur.classList.toggle('hot', !!e.target.closest('#cake,.print,.ov')));
+(function follow() { cx += (tx - cx) * .22; cy += (ty - cy) * .22; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(follow); })();
+
+/* ============================ Частицы ============================ */
+const cv = $('#fx'), g = cv.getContext('2d'); let W, H, P = [], run = 0;
+const size = () => { const d = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * d; cv.height = H * d; g.setTransform(d, 0, 0, d, 0, 0); };
+addEventListener('resize', size); size();
+const COL = ['#e8452c', '#ffb347', '#efe6d6', '#1a1512', '#7a8f5a'];
+const add = p => { P.push(p); if (!run) { run = 1; requestAnimationFrame(step); } };
+function smoke(x, y) { for (let i = 0; i < 12; i++) add({ k: 'm', x: x + rand(-4, 4), y, vx: rand(-.4, .4), vy: rand(-2, -.7), r: rand(4, 8), l: .7, d: rand(.006, .012) }); }
+function confetti(n = 170, x0, y0) {
+  for (let i = 0; i < n; i++) { const s = i % 2 ? 1 : -1, o = x0 != null;
+    add({ k: 'c', x: o ? x0 : (s > 0 ? -10 : W + 10), y: o ? y0 : H * rand(.6, .95), vx: o ? rand(-7, 7) : s * rand(6, 15), vy: rand(-17, -6), w: rand(6, 11), h: rand(4, 7),
+      a: rand(0, 6), va: rand(-.3, .3), sw: rand(0, 6), l: 1, d: rand(.004, .008), c: COL[i % COL.length] }); }
+}
+function step() {
+  g.clearRect(0, 0, W, H);
+  for (let i = P.length - 1; i >= 0; i--) {
+    const p = P[i]; p.l -= p.d; p.x += p.vx; p.y += p.vy;
+    if (p.l <= 0 || p.y > H + 30) { P.splice(i, 1); continue; }
+    if (p.k === 'c') { p.vy += .3; p.vx *= .985; p.vy *= .985; p.a += p.va; p.sw += .15; g.globalAlpha = Math.min(1, p.l * 2); g.fillStyle = p.c;
+      g.save(); g.translate(p.x, p.y); g.rotate(p.a); g.scale(1, Math.cos(p.sw)); g.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); g.restore(); }
+    else { p.r += .3; g.globalAlpha = p.l * .45; g.fillStyle = '#d9d0c0'; g.beginPath(); g.arc(p.x, p.y, p.r, 0, 6.3); g.fill(); }
+  }
+  g.globalAlpha = 1; P.length ? requestAnimationFrame(step) : (run = 0, g.clearRect(0, 0, W, H));
+}
+
+/* ============================ Сцена 1: задуть свечу ============================ */
+let b = 0, hold = 0, going = 0, done = 0;
+const bend = $('#bend'), halo = $('#halo');
+function tick() {
+  b = Math.max(0, Math.min(1, b + (hold ? .017 : -.03)));
+  bend.style.transform = `rotate(${b * 36}deg) scale(${1 - b * .5},${1 - b * .75})`;
+  halo.style.opacity = 1 - b; root.style.setProperty('--lum', 1 - b * .7);
+  if (b >= 1) return finish();
+  going = (hold || b > 0) ? requestAnimationFrame(tick) : 0;
+}
+const press = () => { if (done) return burstCake(); hold = 1; if (!going) going = requestAnimationFrame(tick); };
+const release = () => { hold = 0; };
+cake.addEventListener('pointerdown', e => { e.preventDefault(); press(); });
+addEventListener('pointerup', release); addEventListener('pointercancel', release);
+cake.addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); press(); } });
+cake.addEventListener('keyup', release);
+const burstCake = () => { const r = cake.getBoundingClientRect(); confetti(60, r.left + r.width / 2, r.top + 20); };
+
+async function finish() {
+  done = 1; going = 0; hint.classList.add('dim');
+  const r = $('#flame').getBoundingClientRect(); bend.style.opacity = 0; halo.style.opacity = 0; smoke(r.left + r.width / 2, r.top + 10);
+  await wait(500);
+  document.body.classList.add('lit'); root.style.setProperty('--lum', 0);
+  confetti(); await wait(700);
+  cake.classList.add('parked'); $('#title').classList.add('show');
+  await wait(600); table();
+  hint.textContent = CONFIG.ui.table; hint.className = 'tbl'; hint.style.bottom = 'calc(3vh + env(safe-area-inset-bottom))';
+}
+
+/* ============================ Сцена 2: стол ============================ */
+let z = 20;
+function makePrint(inner, cls) {
+  const el = document.createElement('div'); el.className = 'print ' + (cls || ''); el.innerHTML = inner; document.body.appendChild(el); return el;
+}
+function table() {
+  const pw = Math.min(innerWidth * .5, 250), n = CONFIG.photos.length + 1, fx = [.03, .34, .64, .97], dy = [.0, .1, .02, .13];
+  const items = CONFIG.photos.map((s, i) => { const el = makePrint(`<img src="${s}" alt="Foto" draggable="false">`); el.onTap = () => { $('#big').src = s; $('#ovP').classList.add('on'); }; return el; });
+  const note = makePrint(`<small>${CONFIG.ui.note}${CONFIG.name}</small><b>Brief</b><i class="seal"></i>`, 'note'); note.onTap = openLetter; items.push(note);
+  items.forEach((el, i) => {
+    const k = innerWidth < 620 ? [.02, .22, .1, .3][i] * 1 : fx[i];
+    el.style.setProperty('--pw', pw + 'px'); el.style.setProperty('--r', rand(-7, 7) + 'deg');
+    el.style.left = (innerWidth < 620 ? (innerWidth - pw) * [.05, .95, .1, .9][i] : (innerWidth - pw) * fx[i]) + 'px';
+    el.style.top = innerHeight * (innerWidth < 620 ? [.34, .42, .56, .62][i] : .34 + dy[i]) + 'px';
+    el.style.transitionDelay = i * .18 + 's'; drag(el);
+    requestAnimationFrame(() => el.classList.add('in'));
+    setTimeout(() => { el.style.transitionDelay = '0s'; el.classList.add('settled'); }, 1600 + i * 180);
+  });
+}
+function drag(el) {
+  let sx, sy, ox, oy, lx, moved;
+  el.addEventListener('pointerdown', e => { el.setPointerCapture(e.pointerId); sx = lx = e.clientX; sy = e.clientY; ox = el.offsetLeft; oy = el.offsetTop; moved = 0; el.style.zIndex = ++z; el.classList.add('held'); });
+  el.addEventListener('pointermove', e => {
+    if (!el.hasPointerCapture(e.pointerId)) return;
+    const dx = e.clientX - sx, dy = e.clientY - sy; if (Math.abs(dx) + Math.abs(dy) > 6) moved = 1;
+    el.style.left = ox + dx + 'px'; el.style.top = oy + dy + 'px';
+    el.style.setProperty('--tilt', Math.max(-14, Math.min(14, (e.clientX - lx) * 1.4)) + 'deg'); lx = e.clientX;
+  });
+  const up = () => { el.classList.remove('held'); el.style.setProperty('--tilt', '0deg'); if (!moved && el.onTap) el.onTap(); moved = 1; };
+  el.addEventListener('pointerup', up); el.addEventListener('pointercancel', () => { el.classList.remove('held'); moved = 1; });
+}
+
+/* ============================ Письмо и просмотр ============================ */
+function openLetter() {
+  const L = CONFIG.letter; $('#sheet').innerHTML = L.map((t, k) => `<p style="--k:${k}">${t}</p>`).join('') + `<p class="sig" style="--k:${L.length}">${CONFIG.from}</p>`;
+  $('#ovL').classList.add('on');
+}
+const closeAll = () => { $('#ovL').classList.remove('on'); $('#ovP').classList.remove('on'); };
+$('#ovL').addEventListener('click', closeAll); $('#ovP').addEventListener('click', closeAll);
+addEventListener('keydown', e => e.key === 'Escape' && closeAll());
+</script>
 </body>
 </html>
