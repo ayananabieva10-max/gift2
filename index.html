@@ -20,9 +20,9 @@ canvas{position:fixed;inset:0;width:100%;height:100%;z-index:80;pointer-events:n
  padding:calc(14px + env(safe-area-inset-top)) 22px calc(18px + env(safe-area-inset-bottom))}
 #hud{display:flex;align-items:center;gap:12px;font-size:.66rem;letter-spacing:.16em;color:var(--dim);height:22px}
 #hud i{flex:1;height:2px;background:#ffffff18;position:relative}#hud b{position:absolute;left:0;top:0;bottom:0;background:var(--pink);width:0;transition:width .8s var(--out)}
-.scr{position:absolute;left:22px;right:22px;top:calc(48px + env(safe-area-inset-top));bottom:calc(18px + env(safe-area-inset-bottom));display:flex;flex-direction:column;min-height:0;
- opacity:0;visibility:hidden;pointer-events:none;transform:translateY(14px);transition:opacity .4s,transform .5s var(--out),visibility 0s .4s}
-.scr.on{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition:opacity .6s,transform .8s var(--out),visibility 0s}
+.scr{position:absolute;left:22px;right:22px;top:calc(48px + env(safe-area-inset-top));bottom:calc(18px + env(safe-area-inset-bottom));display:none;flex-direction:column;min-height:0;
+ opacity:1;visibility:visible;pointer-events:none;transform:none}
+.scr.on{display:flex;pointer-events:auto}
 .body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:18px;min-height:0;overflow-y:auto;overflow-x:hidden;padding:8px 3px 12px;scrollbar-width:thin;scrollbar-color:var(--pink) transparent}
 .act{flex:0 0 auto;padding:14px 0 2px}
 .btn{width:100%;min-height:60px;border:0;border-radius:999px;background:linear-gradient(135deg,#ffb1bd,var(--pink) 48%,var(--pink-hot));color:#390712;font:600 .8rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;box-shadow:0 14px 34px -12px rgba(255,45,87,.82),inset 0 1px #fff7;opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .5s,transform .5s var(--out)}
@@ -203,10 +203,17 @@ const say = (el, txt, t = tok) => type(el, txt.replace(/\|/g, '\n'), t);
 const label = (b, t) => { b.classList.remove('show'); b.textContent = t; setTimeout(() => b.classList.add('show'), 60); };
 
 async function go(n) {
-  const t = ++tok; skip = 0; if (cur >= 0) S[cur].classList.remove('on'); cur = n;
+  const t = ++tok; skip = 0;
+  // Старый экран удаляется из layout сразу: его текст физически не может остаться поверх нового.
+  S.forEach((screen, i) => {
+    if (i === n) return;
+    screen.classList.remove('on');
+    screen.querySelectorAll('.tw').forEach(el => { el.textContent = ''; el.classList.remove('cur'); });
+  });
+  cur = n; S[n].classList.add('on');
   $$('.btn').forEach(b => b.classList.remove('show'));
   $('#fid').textContent = String(STEP[n] + (n === 2 ? idx : 0)).padStart(2, '0') + '/08'; $('#bar').style.width = (STEP[n] + (n === 2 ? idx : 0)) / 8 * 100 + '%';
-  await wait(560); if (t !== tok) return; S[n].classList.add('on');
+  await wait(40); if (t !== tok) return;
   if (n === 1) await scan(t);
   if (n === 2) { $('#pt').dataset.t = 'Akte #0' + (idx + 1); $('#cap').textContent = $('#cnt').textContent = ''; $('#frame').classList.remove('open'); unlocked = 0; $('#ph').src = CFG.photos[idx]; }
   for (const e of $$('#s' + n + ' .tw')) { if (t !== tok) return; if (e.id === 'cap' || e.id === 'cnt' || e.id === 'lv2' || e.id === 'fw') continue; await type(e, e.dataset.t, t); await wait(120); }
